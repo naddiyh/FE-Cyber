@@ -5,7 +5,7 @@ import { Navlink } from './navLink';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { FaCircleUser } from 'react-icons/fa6';
+
 import PrimaryButton from '../buttons/PrimaryButton';
 
 const Navbar = () => {
