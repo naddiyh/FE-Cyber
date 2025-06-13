@@ -15,7 +15,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScroll(window.scrollY > 200);
+      setIsScroll(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -31,30 +31,25 @@ const Navbar = () => {
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col ">
           <div
-            className={` justify-between items-center  ${
+            className={` fixed md:px-28 left-0 right-0 top-0 flex justify-between w-full items-center  ${
               isScroll
-                ? 'text-white bg-opacity-70 hover:text-primary-blue shadow-sm'
+                ? ' bg-opacity-70 text-primary-blue shadow-md bg-white/20  backdrop-blur-md'
                 : 'text-primary-blue'
-            } navbar fixed left-0 right-0 top-0 w-full gap-2 px-4 py-6 md:px-32 `}
+            } navbar  gap-2 py-4   `}
           >
             <div className="flex items-center">
               <Image
-                src="/globe.svg"
-                width={30}
-                height={30}
+                src="/images/logo.png"
+                width={75}
+                height={75}
                 alt="logo"
                 objectPosition="top"
                 objectFit="cover"
-                className="flex"
               />
             </div>
 
-            <div className="flex lg:hidden">
-              <label
-                htmlFor="my-drawer-3"
-                aria-label="open sidebar"
-                className="flex "
-              >
+            <div className="flex lg:hidden ">
+              <label htmlFor="my-drawer-3" aria-label="open sidebar">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -71,11 +66,11 @@ const Navbar = () => {
               </label>
             </div>
 
-            <div className="lg:flex hidden">
+            <div className="lg:flex hidden bg-primary-blue  rounded-lg px-8 py-2 ">
               <div className="inline-flex gap-8">
                 {Navlink.map((item) => (
                   <Link key={item.href} href={item.href}>
-                    <li className="inline-flex cursor-pointer text-black hover:text-primary-blue">
+                    <li className="inline-flex text-white cursor-pointer hover:text-secondary-blue ">
                       {item.title}
                     </li>
                   </Link>
@@ -83,10 +78,9 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <div className="hidden lg:flex">
-                <div className="dropdown dropdown-end flex items-center gap-4">
-                  {/* <div
+            <div className=" items-center gap-4 hidden lg:flex">
+              <div className="dropdown dropdown-end flex items-center gap-4">
+                {/* <div
                       tabIndex={0}
                       role="button"
                       className="avatar btn btn-circle btn-ghost"
@@ -106,40 +100,40 @@ const Navbar = () => {
                       </div>
                     </div> */}
 
-                  <ul
-                    tabIndex={0}
-                    className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
-                  >
-                    <li>
-                      <Link
-                        href="/profile"
-                        className="justify-between text-white"
-                      >
-                        Profile
-                        <span className="badge">New</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/settings" className="text-white">
-                        Settings
-                      </Link>
-                    </li>
-                    <li>
-                      <button className="w-full text-left text-white">
-                        Log out
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-
-                <PrimaryButton fullwidth={true} onClick={handleLogin}>
-                  Masuk
-                </PrimaryButton>
+                <ul
+                  tabIndex={0}
+                  className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+                >
+                  <li>
+                    <Link
+                      href="/profile"
+                      className="justify-between text-white"
+                    >
+                      Profile
+                      <span className="badge">New</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/settings" className="text-white">
+                      Settings
+                    </Link>
+                  </li>
+                  <li>
+                    <button className="w-full text-left text-white">
+                      Log out
+                    </button>
+                  </li>
+                </ul>
               </div>
+
+              <PrimaryButton fullwidth={true} onClick={handleLogin}>
+                Masuk
+              </PrimaryButton>
             </div>
           </div>
         </div>
 
+        {/* vers mobile */}
         <div className="drawer-side">
           <label
             htmlFor="my-drawer-3"
