@@ -2,12 +2,8 @@ import Image from 'next/image';
 import { IForm } from '@/types/IForm';
 import { BiSolidMessageDetail } from 'react-icons/bi';
 import { BiSolidLike } from 'react-icons/bi';
-export const BoxForum: React.FC<IForm> = ({
-  name,
-  status,
-  comment,
-  profile,
-}) => {
+
+const BoxForum: React.FC<IForm> = ({ name, status, comment, profile }) => {
   return (
     <div className="shadow-xl px-4 py-6 rounded-xl ">
       <div className="flex flex-col gap-4">
@@ -71,3 +67,5 @@ export const BoxForum: React.FC<IForm> = ({
 //       </div>
 //     );
 //   };
+
+export default BoxForum;

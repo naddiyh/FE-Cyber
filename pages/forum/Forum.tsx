@@ -1,6 +1,6 @@
-import { BoxForum } from './components/BoxForum';
+import BoxForum from './components/BoxForum';
 
-export const Forum = () => {
+const Forum = () => {
   return (
     <div>
       halo ini page forum
@@ -8,3 +8,5 @@ export const Forum = () => {
     </div>
   );
 };
+
+export default Forum;

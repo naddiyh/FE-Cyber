@@ -2,7 +2,7 @@
 import PrimaryButton from '@/components/buttons/PrimaryButton';
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import Image from 'next/image';
-export const OverviewSimulation = () => {
+const OverviewSimulation = () => {
   return (
     <div className=" px-4 py-16 flex w-full md:px-32 ">
       <div className="flex flex-row items-center gap-20 ">
@@ -49,3 +49,5 @@ export const OverviewSimulation = () => {
     </div>
   );
 };
+
+export default OverviewSimulation;

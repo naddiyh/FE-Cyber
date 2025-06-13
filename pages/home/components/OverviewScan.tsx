@@ -1,5 +1,5 @@
 import Image from 'next/image';
-export const OverviewScan = () => {
+const OverviewScan = () => {
   return (
     <div className="bg-primary-blue py-10 my-20 w-full">
       <div className="flex flex-col  md:flex-row  px-4 md:px-32 py-20 items-center  gap-12 md:gap-10">
@@ -25,3 +25,5 @@ export const OverviewScan = () => {
     </div>
   );
 };
+
+export default OverviewScan;

@@ -8,7 +8,7 @@ const HighligthObject = [
   { title: 'Scan a Second', icon: BiScan },
 ];
 
-export const Highligth = () => {
+const Highligth = () => {
   return (
     <div className="w-full px-4 mt-20 md:mt-0 md:mb-20 md:px-32 ">
       <div className="  relative grid grid-cols-1 gap-10 md:grid-cols-4 items-center justify-center ">
@@ -27,3 +27,5 @@ export const Highligth = () => {
     </div>
   );
 };
+
+export default Highligth;

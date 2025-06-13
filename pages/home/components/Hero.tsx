@@ -4,7 +4,7 @@ import Image from 'next/image';
 import toast, { Toaster } from 'react-hot-toast';
 import { AiOutlineLogin } from 'react-icons/ai';
 
-export const Hero = () => {
+const Hero = () => {
   const notif = () => toast('halo nade');
   return (
     <div className="flex  px-4 md:px-32 md:pt-10 pt-28 flex-col-reverse md:flex-row gap-10 md:gap-24 items-center md:min-h-screen">
@@ -72,3 +72,5 @@ export const Hero = () => {
     </div>
   );
 };
+
+export default Hero;

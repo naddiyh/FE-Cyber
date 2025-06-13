@@ -1,11 +1,12 @@
 'use client';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
-import { BoxForum } from '@/pages/forum/components/BoxForum';
+import BoxForum from '@/pages/forum/components/BoxForum';
+
 import { useState } from 'react';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 
-export const OverviewForum = () => {
+const OverviewForum = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const forumData = [
@@ -122,3 +123,5 @@ export const OverviewForum = () => {
     </div>
   );
 };
+
+export default OverviewForum;

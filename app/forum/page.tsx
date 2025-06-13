@@ -1,4 +1,4 @@
-import { Forum } from '@/pages/forum/Forum';
+import Forum from '@/pages/forum/Forum';
 
 export default function ForumPage() {
   return <Forum />;
