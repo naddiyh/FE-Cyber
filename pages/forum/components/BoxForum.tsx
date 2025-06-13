@@ -26,12 +26,16 @@ export const BoxForum: React.FC<IForm> = ({
           </div>
         </div>
         <p className="text-text-s md:text-text-m  ">{comment}</p>
-        <div className="flex flex-row gap-3 justify-end items-center">
-          <div>
-            <BiSolidLike className="w-4 h-4 text-primary-blue" />
+        <div className="flex flex-row gap-2 justify-end items-center">
+          <div className="flex gap-1 items-center justify-center">
+            <p className="text-text-s">100</p>
+
+            <BiSolidLike className="w-5 h-5 text-primary-blue" />
           </div>
-          <div>
-            <BiSolidMessageDetail className="h-4 w-4 text-primary-blue" />
+          <div className="flex gap-1 items-center justify-center">
+            <p className="text-text-s">10</p>
+
+            <BiSolidMessageDetail className="h-5 w-5 text-primary-blue" />
           </div>
         </div>
       </div>

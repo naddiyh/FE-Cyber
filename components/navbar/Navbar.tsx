@@ -5,7 +5,7 @@ import { Navlink } from './navLink';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-
+import { AiOutlineLogin } from 'react-icons/ai';
 import PrimaryButton from '../buttons/PrimaryButton';
 
 const Navbar = () => {
@@ -31,7 +31,7 @@ const Navbar = () => {
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col ">
           <div
-            className={` fixed md:px-28 left-0 right-0 top-0 flex justify-between w-full items-center  ${
+            className={` fixed md:px-28 left-0 right-0 top-0 py-2 flex justify-between w-full items-center  ${
               isScroll
                 ? ' bg-opacity-70 text-primary-blue shadow-md bg-white/20  backdrop-blur-md'
                 : 'text-primary-blue'
@@ -66,11 +66,11 @@ const Navbar = () => {
               </label>
             </div>
 
-            <div className="lg:flex hidden bg-primary-blue  rounded-lg px-8 py-2 ">
-              <div className="inline-flex gap-8">
+            <div className="lg:flex hidden  px-8 py-2 rounded-2xl  ">
+              <div className="inline-flex gap-8 rounded-md">
                 {Navlink.map((item) => (
                   <Link key={item.href} href={item.href}>
-                    <li className="inline-flex text-white cursor-pointer hover:text-secondary-blue ">
+                    <li className="inline-flex  text-black cursor-pointer hover:text-secondary-blue ">
                       {item.title}
                     </li>
                   </Link>
@@ -128,6 +128,7 @@ const Navbar = () => {
 
               <PrimaryButton fullwidth={true} onClick={handleLogin}>
                 Masuk
+                <AiOutlineLogin className="h-5 w-5" />
               </PrimaryButton>
             </div>
           </div>

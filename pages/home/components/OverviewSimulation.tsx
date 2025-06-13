@@ -1,6 +1,6 @@
 'use client';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
-
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import Image from 'next/image';
 export const OverviewSimulation = () => {
   return (
@@ -24,7 +24,7 @@ export const OverviewSimulation = () => {
             pariatur unde nesciunt delectus accusantium rerum dolores ut
             aspernatur quis quibusdam!
           </p>
-          <div>
+          <div className="flex flex-col gap-4 ">
             <div className="flex  items-center gap-2">
               <Image src="/svg/check.svg" width={45} height={45} alt="check" />
               <p className="text-text-l font-medium">Leaderboard Challenge</p>
@@ -39,7 +39,10 @@ export const OverviewSimulation = () => {
             </div>
           </div>
           <div className="justify-end flex">
-            <PrimaryButton fullwidth={false}>Gabung Diskusi</PrimaryButton>
+            <PrimaryButton fullwidth={false}>
+              Coba Simulasi
+              <FaArrowUpRightFromSquare />
+            </PrimaryButton>
           </div>
         </div>
       </div>

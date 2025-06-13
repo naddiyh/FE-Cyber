@@ -2,11 +2,12 @@
 import PrimaryButton from '@/components/buttons/PrimaryButton';
 import Image from 'next/image';
 import toast, { Toaster } from 'react-hot-toast';
+import { AiOutlineLogin } from 'react-icons/ai';
 
 export const Hero = () => {
   const notif = () => toast('halo nade');
   return (
-    <div className="flex  px-4 md:px-32 md:pt-0 pt-28 flex-col-reverse md:flex-row gap-10 md:gap-24 items-center md:min-h-screen">
+    <div className="flex  px-4 md:px-32 md:pt-10 pt-28 flex-col-reverse md:flex-row gap-10 md:gap-24 items-center md:min-h-screen">
       <div className="flex flex-col gap-8 items-center md:items-start md:gap-6 ">
         <h2
           className="font-extrabold text-heading-s md:text-heading-l 
@@ -46,6 +47,7 @@ export const Hero = () => {
         <div className="flex  gap-6">
           <PrimaryButton onClick={notif} fullwidth={false}>
             Masuk
+            <AiOutlineLogin className="h-5 w-5" />
           </PrimaryButton>
           <button
             className="border-primary-blue duration-300 transition-all transform hover:border-secondary-blue shadow-md text-primary-blue hover:text-white hover:bg-secondary-blue border rounded-2xl px-6"

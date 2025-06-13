@@ -3,6 +3,7 @@ import PrimaryButton from '@/components/buttons/PrimaryButton';
 import { BoxForum } from '@/pages/forum/components/BoxForum';
 import { useState } from 'react';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 
 export const OverviewForum = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,7 +57,10 @@ export const OverviewForum = () => {
             aspernatur quis quibusdam!
           </p>
 
-          <PrimaryButton fullwidth={false}>Gabung Diskusi</PrimaryButton>
+          <PrimaryButton fullwidth={false}>
+            Gabung Diskusi
+            <FaArrowUpRightFromSquare />
+          </PrimaryButton>
         </div>
 
         <div className="flex items-center justify-center">
